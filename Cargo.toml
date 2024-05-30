@@ -1,0 +1,71 @@
+[package]
+name = "rs_tokenizer"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokenizers = { version = "0.15.2" }
+grapheme_to_phoneme = { version = "0.1.0",path = "../grapheme_to_phoneme-0.1.0" }
+english-numbers = "0.3.3"
+jieba-rs = "0.6"
+
+
+lingua = { version = "1.6.2", default-features = false, features = ["english", "chinese", "japanese"] }
+regex = { version = "1.10.3" }
+fancy-regex = "0.13.0"
+
+fnv = "1.0.x"
+substring = "1.4.5"
+pinyin = { version = "0.10", features = ["compat", "default"], path = "../pinyin-0.10.0" }
+zip = "0.5.13"
+log = "0.4.20"
+serde_json = "1.0.114"
+lazy_static="*"
+
+anyhow = "1.0.57"
+ndarray = "0.15.x"
+#ort = "1.14.x"
+ort = { version = "2.0.0-rc.1" }
+opencv = { version="0.86.1", features= ["clang-runtime"] }
+rsmpeg = { version = "0.14.2" }
+
+
+# wav audio
+dasp = { version = "0.11", features = ["all"] }
+hound = "3"
+dasp_signal = "0.11.0"
+soundtouch = { version = "0.4.0" ,path = "../soundtouch-0.4.0"}
+
+#sdl2 = { version = "0.36",features = ["ttf","image","gfx","mixer","static-link","bundled"] }
+sdl2 = { version = "0.36",features = ["ttf","image","gfx","mixer","static-link","bundled"] }
+
+num-traits = "0.2.18"
+num = "0.4.1"
+
+cstr = "0.2.11"
+
+[features]
+default = ["ort/cuda", "cuda"]
+cuda = []
+
+# FFmpeg 5.* support
+#ffmpeg5 = ["rusty_ffmpeg/ffmpeg5"]
+# FFmpeg 6.* support
+#ffmpeg6 = ["rusty_ffmpeg/ffmpeg6"]
+#link_system_ffmpeg = ["rusty_ffmpeg/link_system_ffmpeg"]
+
+
+[profile.dev]
+opt-level = 0
+rpath = true
+
+[profile.release]
+opt-level = 3
+panic = "abort" # Strip expensive panic clean-up logic
+codegen-units = 1 # Compile crates one after another so the compiler can optimize better
+lto = true # Enables link to optimizations
+strip = true # Remove debug symbols
+debug = false
+rpath = true
