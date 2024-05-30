@@ -3,7 +3,7 @@
 - GPT-SoVITS`纯Rust编译`推理代码（Demo工程代码，未完善）：包含中英文解析、音频输出、音频播放
 - 一些字典依赖数据已经输出到data目录，
 - onnx导出(对原模型结构进行的onnx适配修改)：python sovits_infer/export_onnx.py 
-- onnx模型文件参考，百度网盘
+- data文件目录参考百度网盘: https://pan.baidu.com/s/1-aBsaIaisO_DLy-xZuh7ag?pwd=nei8
 
 ## Run demo
 - 1.安装rust
