@@ -1,6 +1,6 @@
 ## 介绍
 
-- GPT-SoVITS`纯Rust编译`推理代码（Demo工程代码，未完善）：包含中英文解析、音频输出、音频播放
+- GPT-SoVITS`纯Rust编译`推理代码（完整Demo工程代码，可以打包二进制程序，在Windows、Mac、Linux中，CPU or CUDA 运行）：包含中英文解析、音频输出、音频播放
 - 一些字典依赖数据已经输出到data目录，
 - onnx导出(对原模型结构进行的onnx适配修改)：python sovits_infer/export_onnx.py 
 - data文件目录参考百度网盘: https://pan.baidu.com/s/1-aBsaIaisO_DLy-xZuh7ag?pwd=nei8
