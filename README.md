@@ -4,6 +4,7 @@
 - 一些字典依赖数据已经输出到data目录，
 - onnx导出(对原模型结构进行的onnx适配修改)：python sovits_infer/export_onnx.py 
 - data文件目录参考百度网盘: https://pan.baidu.com/s/1-aBsaIaisO_DLy-xZuh7ag?pwd=nei8
+- - 更新网盘数据: 'sovits_infer' onnx模型导出工程、依赖的Cargo.toml lib: （部分二次开发了）grapheme_to_phoneme-0.1.0、pinyin-0.10.0、soundtouch-0.4.0
 
 ## Run demo
 - 1.安装rust
