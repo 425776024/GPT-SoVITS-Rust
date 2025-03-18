@@ -15,3 +15,7 @@
 
 ## bilibili
 【最近爆火的开源语音克隆项目GPT-SoVITS，我用一个月左右时间把他从原来玩具级别Python工程，用纯高性能Rust编程语言实现了，更快更好更省资源】 https://www.bilibili.com/video/BV11H4y1s7q4/?share_source=copy_web&vd_source=94d735f74b7dcc93cb96880af1582df1
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=425776024/GPT-SoVITS-Rust&type=Date)](https://www.star-history.com/#425776024/GPT-SoVITS-Rust&Date)
